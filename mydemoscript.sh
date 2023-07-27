@@ -1,3 +1,3 @@
 hostname
 sleep 5
-echo "This is from dev branch "
+echo "This is from dev"

@@ -16,5 +16,10 @@ pipeline {
                 sh 'sh mydemoscript.sh'      
             }    
         }
+        stage('Trigger webhook') {
+            steps {
+                echo 'Invoked this from webhook'      
+            }    
+        }
     }
 }

@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    stages {
+        stage('Code Checkout') {
+            steps {
+                git branch: 'master', url: 'https://github.com/mahendra-bezawada/Jenkins-Docker-Project.git'
+            }    
+        }
+        stage('List Files') {
+            steps {
+                sh 'ls -lrt'
+            }    
+        }
+        stage('Execute Files') {
+            steps {
+                sh 'sh mydemoscript.sh'      
+            }    
+        }
+    }
+}
